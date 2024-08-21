@@ -42,7 +42,7 @@
                         <a class="nav-link text-white" href="index.html" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white">Our Team</a>
+                        <a class="nav-link text-white" href="team.html">Our Team</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-disabled="true" href="esports.html">Esports</a>
@@ -51,7 +51,7 @@
                         <img src="assets/s8ulLogo.webp" class="brandlogo mr-4 ml-4" width="90">
                     </div>
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-disabled="true" href="achievements.html">Achievements</a>
+                        <a class="nav-link text-white" aria-disabled="true">Achievements</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-disabled="true" href="#">Gallery</a>
@@ -63,11 +63,7 @@
             </div>
         </div>
     </nav>
-    <div class="container text-center">
-        <h1 class="sectionHeading my-5">Our Team</h1>
-        <div class="row d-flex justify-content-center" id="memberCards">
-            <!-- Cards -->
-        </div>
+    <div class="container-fluid text-center">
     </div>
     <!-- Section : Follow Us on -->
     <div class="container-fluid text-center followSection py-5">
@@ -107,34 +103,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <!-- External JS -->
-    <script type="module">
-        import { members } from './members.js';
-
-        const container = document.getElementById('memberCards');
-
-        members.forEach(member => {
-            const card = `
-        <div class="col-lg-4">
-            <div class="card bg-transparent text-white d-flex justify-content-center align-items-center my-3 border-0 creatorCard">
-                <div class="creatorImageContainer">
-                    <img src="${member.imgSrc}" class="card-img-top creatorImage" alt="${member.igSrc}"
-                    oncontextmenu="return false;" draggable="false">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title memberName">${member.igName}</h5>
-                    <p class="card-text memberRealName">${member.realName}</p>
-                    <a class="btn youtubeButton mx-2 mb-3 rounded-circle " target="_blank"
-                        href="${member.youtube}"><i class="bi bi-youtube fs-4"></i></a>
-                    <a class="btn btnCustom mx-2 mb-3 rounded-circle" target="_blank"
-                        href="${member.instagram}"><i class="bi bi-instagram fs-4"></i></a>
-                </div>
-            </div>
-        </div>
-    `;
-            container.innerHTML += card;
-        });
-    </script>
 </body>
 </body>
 
