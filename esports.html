@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8">
@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand nav-links d-lg-none m-1" href="index.html">
                 <img src="assets/s8ulLogo.webp" class="brandlogo" alt="S8UL" width="100">
@@ -54,7 +54,7 @@
                         <a class="nav-link text-white" aria-disabled="true" href="achievements.html">Achievements</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-disabled="true" href="#">Gallery</a>
+                        <a class="nav-link text-white" aria-disabled="true" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-disabled="true" href="#">Contact us</a>
@@ -63,10 +63,10 @@
             </div>
         </div>
     </nav>
+    <!-- Team Soul BGMI -->
     <div class="container text-center">
         <h1 class="sectionHeading my-5">BGMI Roaster - Team Soul</h1>
-        <div class="container starsChampionship fs-4" data-bs-custom-class="customTooltip" data-bs-toggle="tooltip"
-            data-bs-title="4 Championships"
+        <div class="container goldenText fs-4"
             style="--bs-tooltip-bg: var(--bd-violet-bg);  --bs-tooltip-color: var(--bs-white);">
             <i class="bi bi-star-fill px-2"></i>
             <i class="bi bi-star-fill px-2"></i>
@@ -76,6 +76,9 @@
         <div class="row d-flex justify-content-center" id="teamBgmi">
             <!-- Team SouL Cards will be dynamically inserted here -->
         </div>
+    </div>
+    <!-- Team S8UL Pokemon Unite -->
+    <div class="container text-center">
         <h1 class="sectionHeading my-5">Pokemon Unite Roaster</h1>
         <div class="row d-flex justify-content-center" id="teamPokemon">
             <!-- Team S8ul Pokemon Unite Cards will be dynamically inserted here -->
@@ -111,6 +114,7 @@
     <footer class="text-center container py-4">
         <hr>
         <h5>Copyright © 2023, S8UL. All rights reserved.</h5>
+        <h6>This site is only build with the design purpose. The data might vary.</h6>
         <sub>Designed and Developed with &#10084; by <a href="https://megh2711.github.io/meghthebaadal.com/"
                 style="text-decoration: none; color: white;" target="_blank"><b>Megh
                     Patel</b></a></sub>

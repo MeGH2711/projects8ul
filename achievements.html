@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8">
@@ -21,17 +21,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- External Local File -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand nav-links d-lg-none m-1" href="index.html">
                 <img src="assets/s8ulLogo.webp" class="brandlogo" alt="S8UL" width="100">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,7 +57,7 @@
                         <a class="nav-link text-white" aria-disabled="true">Achievements</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-disabled="true" href="#">Gallery</a>
+                        <a class="nav-link text-white" aria-disabled="true" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-disabled="true" href="#">Contact us</a>
@@ -63,11 +66,142 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid text-center">
+    <!-- Esports Awards Landing -->
+    <div class="container esportsAwards">
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <img src="assets/achievements/awards.webp" class="img-fluid awardsImage rounded-5" alt=""
+                    oncontextmenu="return false;" draggable="false">
+            </div>
+            <div class="col-lg-8 d-flex justify-content-center align-items-center">
+                <div class="row row-cols-1">
+                    <div class="col">
+                        <h1 class="eaText1 mt-5">Esports Content Group of the Year</h1>
+                    </div>
+                    <div class="col">
+                        <h1 class="eaText2"><span class="goldenText">3 Times</span> in a row</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- S8UL Reactions Winning Award -->
+    <div class="container-fluid pt-5">
+        <div class="row text-center">
+            <div class="col-lg-4 my-1">
+                <video class="reactionVideo rounded-3" width="100%" loop>
+                    <source src="assets/achievements/sampleVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <sub>Click on the video to Play/Pause</sub><br>
+                <h2 class="videoText my-2">2022</h2>
+            </div>
+            <div class="col-lg-4 my-1">
+                <video class="reactionVideo rounded-3" width="100%" loop>
+                    <source src="assets/achievements/sampleVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <sub>Click on the video to Play/Pause</sub><br>
+                <h2 class="videoText my-2">2023</h2>
+            </div>
+            <div class="col-lg-4 my-1">
+                <video class="reactionVideo rounded-3" width="100%" loop>
+                    <source src="assets/achievements/sampleVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <sub>Click on the video to Play/Pause</sub><br>
+                <h2 class="videoText my-2">2024</h2>
+            </div>
+        </div>
+    </div>
+    <!-- Thug Quote -->
+    <div class="container-fluid thugQuote mt-5">
+        <div class="container py-5">
+            <h1 class="text-center">"The first time could have been lucky, the second time was a charm, and the third
+                time firmly
+                means that the best content group of India is the best in the world."</h1>
+            <p class="text-center fs-4">- Thug (Animesh Agarwal)</p>
+        </div>
+    </div>
+    <!-- S8UL Gaming Festival -->
+    <div class="container text-center mt-5">
+        <h1 class="sectionHeading py-3">S8UL Gaming Festival 2023</h1>
+        <iframe class="youtubeVideo rounded-3 mt-5"
+            src="https://www.youtube-nocookie.com/embed/y9psZ6NkkMY?si=8O8eesM3avqW44fB&amp;controls=0&amp;rel=0"
+            title="S8UL Gaming House Intro" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <!-- Mobies Awards -->
+    <div class="container text-center mt-5">
+        <h1 class="sectionHeading pt-3">Global Impact on Mobile Gaming by Mobies Awards 2023</h1>
+        <div class="row mt-5">
+            <div class="col-lg-5 my-2">
+                <img src="assets/achievements/mobiesImage1.webp" class="img-fluid rounded-3 hoverImage"
+                    oncontextmenu="return false;" draggable="false" alt="" data-bs-toggle="modal"
+                    data-bs-target="#galleryModel" onclick="changeModalImage(this.src)">
+            </div>
+            <div class="col-lg-7 my-2 d-flex align-items-center">
+                <img src="assets/achievements/mobiesImage2.webp" class="img-fluid rounded-3 hoverImage"
+                    oncontextmenu="return false;" draggable="false" alt="" data-bs-toggle="modal"
+                    data-bs-target="#galleryModel" onclick="changeModalImage(this.src)">
+            </div>
+        </div>
+    </div>
+    <!-- SOUL BGMS Champions -->
+    <div class="container text-center mt-5">
+        <h1 class="sectionHeading py-3">BGMS Champions 2024</h1>
+        <img src="assets/achievements/BGMS2024Champions.webp" class="img-fluid rounded-3  mt-5 hoverImage"
+            oncontextmenu="return false;" draggable="false" alt="" data-bs-toggle="modal" data-bs-target="#galleryModel"
+            onclick="changeModalImage(this.src)">
+    </div>
+    <!-- SOUL BMPS Champions -->
+    <div class="container text-center mt-5">
+        <h1 class="sectionHeading py-3">BMPS Champions 2022</h1>
+        <img src="assets/achievements/BMPS2022Champions.webp" class="img-fluid rounded-3  mt-5 hoverImage"
+            oncontextmenu="return false;" draggable="false" alt="" data-bs-toggle="modal" data-bs-target="#galleryModel"
+            onclick="changeModalImage(this.src)">
+    </div>
+    <!-- Redbull Soapboax Race -->
+    <div class="container text-center mt-5">
+        <h1 class="sectionHeading py-3">RedBull Soapbox Race 2024</h1>
+        <video class="redBullVideo rounded-3 mt-5 custom-controls" width="80%" loop controls
+            controlsList="nodownload nopictureinpicture" poster="assets/achievements/S8ULRedBullThumbnail.webp">
+            <source src="assets/achievements/S8ULRedBullVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video><br>
+        <sub>Click on the video to Play/Pause</sub>
+    </div>
+    <!-- India Gaming Awards -->
+    <div class="container text-center mt-5">
+        <h1 class="sectionHeading py-3">India Gaming Awards 2023</h1>
+        <div class="row mt-5">
+            <div class="col-lg-6 my-2">
+                <img src="assets/achievements/igaImage1.webp" class="img-fluid w-75 rounded-3 hoverImage"
+                    oncontextmenu="return false;" draggable="false" alt="" data-bs-toggle="modal" data-bs-target="#galleryModel"
+                    onclick="changeModalImage(this.src)">
+            </div>
+            <div class="col-lg-6 my-2">
+                <img src="assets/achievements/igaImage2.webp" class="img-fluid w-75 rounded-3 hoverImage"
+                    oncontextmenu="return false;" draggable="false" alt="" data-bs-toggle="modal" data-bs-target="#galleryModel"
+                    onclick="changeModalImage(this.src)">
+            </div>
+        </div>
+    </div>
+    <!-- Modal For All Images -->
+    <div class="modal fade" id="galleryModel" tabindex="-1" aria-labelledby="galleryModel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body galleryImages d-flex justify-content-center align-items-center">
+                    <img id="modalImage" src="" class="img-fluid rounded-3 hoverImage my-2"
+                        oncontextmenu="return false;" draggable="false" alt="">
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Section : Follow Us on -->
     <div class="container-fluid text-center followSection py-5">
-        <h1 class="sectionHeading my-5">Follow Us on</h1>
+        <h1 class="sectionHeading py-4">Follow Us on</h1>
         <div class="row">
             <div class="col-6 col-lg-3 my-3">
                 <a href="https://www.youtube.com/@S8ULGG" target="_blank">
@@ -95,6 +229,7 @@
     <footer class="text-center container py-4">
         <hr>
         <h5>Copyright © 2023, S8UL. All rights reserved.</h5>
+        <h6>This site is only build with the design purpose. The data might vary.</h6>
         <sub>Designed and Developed with &#10084; by <a href="https://megh2711.github.io/meghthebaadal.com/"
                 style="text-decoration: none; color: white;" target="_blank"><b>Megh
                     Patel</b></a></sub>
@@ -103,6 +238,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- External JS -->
+    <script src="commonScript.js"></script>
+    <script>
+        // Modal
+        function changeModalImage(src) {
+            document.getElementById('modalImage').src = src;
+        }
+    </script>
 </body>
 </body>
 

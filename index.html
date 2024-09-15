@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8">
@@ -15,13 +15,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon//favicon-16x16.png">
     <link rel="manifest" href="assets/favicon//site.webmanifest">
-    <!-- Owl Carousel CSS-->
+    <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <!-- jQuery -->
+    <!-- jQuery and Owl Carousel JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,12 +33,21 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg" id="navbar">
+    <!-- Background Audio -->
+    <div class="position-relative">
+        <audio id="bgAudio" src="assets/spaceshipBg.mp3" autoplay loop></audio>
+        <div class="position-fixed bottom-0 end-0">
+            <button type="button" class="btn rounded-circle m-3 text-white" id="toggleButton">
+                <i class="bi bi-volume-up-fill fs-3" id="toggleIcon"></i>
+            </button>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand nav-links d-lg-none m-1" href="index.html">
                 <img src="assets/s8ulLogo.webp" class="brandlogo" alt="S8UL" width="100">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -62,7 +70,7 @@
                         <a class="nav-link text-white" aria-disabled="true" href="achievements.html">Achievements</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-disabled="true" href="#">Gallery</a>
+                        <a class="nav-link text-white" aria-disabled="true" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-disabled="true" href="#">Contact us</a>
@@ -71,8 +79,8 @@
             </div>
         </div>
     </nav>
-    <!-- Section1 : Landing section -->
-    <div class="container-fluid landingPage">
+    <!-- Section : Landing section -->
+    <div class="container landingPage">
         <div class="textContainer d-flex justify-content-center">
             <h1 class="landingText">S8UL</h1>
         </div>
@@ -81,19 +89,19 @@
                 draggable="false">
         </div>
     </div>
-    <!-- Section2 : About S8UL-->
+    <!-- Section : About S8UL-->
     <div class="container mt-5">
+        <div class="container wawHeading">
+            <h1 class="sectionHeading mt-5 py-4 text-center">Who are we?</h1>
+        </div>
         <div class="row">
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-4 text-center py-5">
                 <img src="assets/landingPage/teamPhoto.webp" oncontextmenu="return false;" draggable="false"
-                    class="img-fluid rounded-3">
+                    class="img-fluid rounded-3 hoverImage">
             </div>
             <div class="col-lg-8 d-flex justify-content-center align-items-center">
-                <div class="row row-cols-1">
-                    <div class="col">
-                        <h1 class="sectionHeading my-2">Who are we?</h1>
-                    </div>
-                    <div class="col">
+                <div class="row">
+                    <div class="col-12">
                         <p class="textJustify">
                             At S8UL, we're more than just an esports organization — we're a community united by a shared
                             passion for gaming and content creation. Our journey began with a vision to bring together
@@ -102,6 +110,8 @@
                             crafting engaging content for millions of fans, we strive to push the boundaries of what's
                             possible in gaming.
                         </p>
+                    </div>
+                    <div class="col-12">
                         <p class="textJustify">
                             Our team is a unique blend of competitive spirit, creativity, and a deep connection with our
                             audience. We don't just play games; we live and breathe them, creating experiences that
@@ -116,20 +126,21 @@
             </div>
         </div>
     </div>
-    <!-- Section3 : Introduction Video -->
-    <div class="container text-center my-5">
+    <!-- Section : Introduction Video -->
+    <div class="container text-center">
         <h1 class="sectionHeading">Our Esports Facility</h1>
-        <iframe class="oefVideo my-5"
-            src="https://www.youtube.com/embed/TpHwZD2tnSY?si=IgX4TrV9nu26OOZf&amp;rel=0&amp;controls=0"
-            title="S8UL Gaming House Intro" frameborder="0"
+        <iframe class="youtubeVideo my-5 rounded-3"
+            src="https://www.youtube.com/embed/TpHwZD2tnSY?si=tWTxI_OshGMej4Vw&amp;rel=0&amp;controls=0"
+            title="S8UL Gaming Festival 2023 After Movie" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"></iframe>
         <p>Watch Full Video on </p>
-        <a class="btn btnCustom mb-3" target="_blank" href="https://youtu.be/TpHwZD2tnSY"><i class="bi bi-youtube"></i>
+        <a class="btn youtubeButton mb-3" target="_blank" href="https://youtu.be/TpHwZD2tnSY"><i
+                class="bi bi-youtube"></i>
             YouTube</a>
     </div>
-    <!-- Section4 : Audience -->
-    <div class="container-fluid text-center reachSection py-5">
+    <!-- Section : Audience -->
+    <div class="container-fluid text-center reachSection py-5 mt-5">
         <div class="row">
             <div class="col-lg-4 my-3">
                 <h1 class="reachNumber">
@@ -152,12 +163,18 @@
                 <h4>Subcribers</h4>
             </div>
             <div class="col-lg-4 my-3">
-                <h1 class="reachNumber">126M</h1><br>
+                <h1 class="reachNumber">
+                    <div id="totalSubscribers">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </h1><br>
                 <h4>Strong #S8ULArmy</h4>
             </div>
         </div>
     </div>
-    <!-- Section5 : Founders -->
+    <!-- Section : Founders -->
     <div class="container text-center">
         <h1 class="sectionHeading mt-5">The Founders</h1>
         <div class="row my-5">
@@ -220,12 +237,49 @@
             </div>
         </div>
     </div>
-    <!-- Section6 : Partner Brands -->
+    <!-- Section : Content Spotlight -->
     <div class="container text-center">
+        <h1 class="sectionHeading">Content Spotlight</h1>
+        <div class="owl-carousel mustWatchCarousel">
+            <div class="thumbnailImageCarousel">
+                <a href="https://youtu.be/QgY2LpIRld0?feature=shared" target="_blank">
+                    <img src="assets/landingPage/mustWatch/s8ulSecertSanta.jpg" class="rounded-3" alt="aorus">
+                </a>
+            </div>
+            <div class="thumbnailImageCarousel">
+                <a href="https://youtu.be/gcceNZ51xo8?feature=shared" target="_blank">
+                    <img src="assets/landingPage/mustWatch/hideAndSeek1.jpg" class="rounded-3" alt="aorus">
+                </a>
+            </div>
+            <div class="thumbnailImageCarousel">
+                <a href="https://youtu.be/KT6wIpmu2T8?feature=shared" target="_blank">
+                    <img src="assets/landingPage/mustWatch/guessTheWord.jpg" class="rounded-3" alt="aorus">
+                </a>
+            </div>
+            <div class="thumbnailImageCarousel">
+                <a href="https://youtu.be/8K8YCORi6o4?feature=shared" target="_blank">
+                    <img src="assets/landingPage/mustWatch/sharkTank.jpg" class="rounded-3" alt="aorus">
+                </a>
+            </div>
+            <div class="thumbnailImageCarousel">
+                <a href="https://youtu.be/8K8YCORi6o4?feature=shared" target="_blank">
+                    <img src="assets/landingPage/mustWatch/s8ulFifaMatch.jpg" class="rounded-3" alt="aorus">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Section : Partner Brands -->
+    <div class="container text-center mt-5">
         <h1 class="sectionHeading">Our Partners</h1>
-        <div class="owl-carousel">
+        <div class="owl-carousel brandsCarousel">
             <div class="brandImage">
-                <img src="assets/landingPage/partnerBrands/iqoo.webp" alt="aorus">
+                <img src="assets/landingPage/partnerBrands/amazon.webp" alt="amazon">
+            </div>
+            <div class="brandImage">
+                <img src="assets/landingPage/partnerBrands/amd.webp" alt="amd">
+            </div>
+            <div class="brandImage">
+                <img src="assets/landingPage/partnerBrands/iqoo.webp" alt="iqoo">
             </div>
             <div class="brandImage">
                 <img src="assets/landingPage/partnerBrands/aorus.webp" alt="aorus">
@@ -253,7 +307,7 @@
             </div>
         </div>
     </div>
-    <!-- Section7 : Follow Us on -->
+    <!-- Section : Follow Us on -->
     <div class="container-fluid text-center followSection py-5">
         <h1 class="sectionHeading my-5">Follow Us on</h1>
         <div class="row">
@@ -283,6 +337,7 @@
     <footer class="text-center container py-4">
         <hr>
         <h5>Copyright © 2023, S8UL. All rights reserved.</h5>
+        <h6>This site is only build with the design purpose. The data might vary.</h6>
         <sub>Designed and Developed with &#10084; by <a href="https://megh2711.github.io/meghthebaadal.com/"
                 style="text-decoration: none; color: white;" target="_blank"><b>Megh
                     Patel</b></a></sub>
@@ -292,8 +347,11 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!-- External JS -->
+    <script src="commonScript.js"></script>
+    <script src="audio.js"></script>
     <script src="carousel.js"></script>
-    <script src="subcount.js"></script>
+    <script type="module" src="members.js"></script>
+    <script type="module" src="subcount.js"></script>
     <script type="module">
         import { members } from './members.js';
 

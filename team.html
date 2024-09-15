@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8">
@@ -12,21 +12,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- FavIcon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon//favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon//favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon//site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
         rel="stylesheet">
     <!-- External Local File -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand nav-links d-lg-none m-1" href="index.html">
                 <img src="assets/s8ulLogo.webp" class="brandlogo" alt="S8UL" width="100">
@@ -54,7 +54,7 @@
                         <a class="nav-link text-white" aria-disabled="true" href="achievements.html">Achievements</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-disabled="true" href="#">Gallery</a>
+                        <a class="nav-link text-white" aria-disabled="true" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-disabled="true" href="#">Contact us</a>
@@ -66,7 +66,45 @@
     <div class="container text-center">
         <h1 class="sectionHeading my-5">Our Team</h1>
         <div class="row d-flex justify-content-center" id="memberCards">
-            <!-- Cards -->
+            <!-- Members Cards -->
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content memberModal border-0">
+                <div class="modal-header border-0">
+                    <!-- Modal title -->
+                    <h1 class="modal-title sectionHeading py-3" id="modalTitle">Mortal</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body border-0">
+                    <div class="row">
+                        <div class="col-lg-4 d-flex justify-content-center align-items-center mb-3">
+                            <!-- Modal image -->
+                            <img id="modalImage" src="assets/members/mortal.webp" class="img-fluid creatorImageModal" alt="" oncontextmenu="return false;" draggable="false">
+                        </div>
+                        <div class="col-lg-8 d-flex flex-column justify-content-between">
+                            <!-- Modal description -->
+                            <p id="modalDescription" class="textJustify creatorModalDescription">SouL Mortal, also known as Naman Mathur,
+                                is a prominent figure in the Indian gaming community and a co-founder of S8UL. Renowned
+                                for his exceptional skills in games like BGMI(Battlegrounds Mobile India) and PUBG
+                                Mobile, Mortal has become a beloved content creator and influencer, inspiring millions
+                                of gamers across India.His dedication, humility, and passion for gaming have earned him
+                                numerous accolades, including \"Esports Player of the Year.\" Beyond the screen, he
+                                actively engages with his fans, promoting a positive gaming culture and uplifting the
+                                Indian esports ecosystem.Mortal's journey is a testament to hard work, perseverance, and
+                                a deep love for the game.</p>
+                            <div class="buttonsContainer mt-auto">
+                                <!-- Social media buttons -->
+                                <a id="modalYouTube" class="btn youtubeButton mb-3 mr-3" target="_blank" href="https://www.youtube.com/@MortaLyt"><i
+                                        class="bi bi-youtube"></i> YouTube</a>
+                                <a id="modalInstagram" class="btn instagramButton mb-3 mx-3" target="_blank" href="https://www.instagram.com/ig_mortal/"><i
+                                        class="bi bi-instagram"></i> Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Section : Follow Us on -->
@@ -99,15 +137,16 @@
     <footer class="text-center container py-4">
         <hr>
         <h5>Copyright © 2023, S8UL. All rights reserved.</h5>
+        <h6>This site is only build with the design purpose. The data might vary.</h6>
         <sub>Designed and Developed with &#10084; by <a href="https://megh2711.github.io/meghthebaadal.com/"
                 style="text-decoration: none; color: white;" target="_blank"><b>Megh
                     Patel</b></a></sub>
-        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!-- External JS -->
+    <script src="commonScript.js"></script>
     <script type="module">
         import { members } from './members.js';
 
@@ -118,24 +157,32 @@
         <div class="col-lg-4">
             <div class="card bg-transparent text-white d-flex justify-content-center align-items-center my-3 border-0 creatorCard">
                 <div class="creatorImageContainer">
-                    <img src="${member.imgSrc}" class="card-img-top creatorImage" alt="${member.igSrc}"
-                    oncontextmenu="return false;" draggable="false">
+                    <img src="${member.imgSrc}" class="card-img-top creatorImage" alt="${member.igName}"
+                    oncontextmenu="return false;" draggable="false" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="window.changeModalContent(\`${member.imgSrc}\`, \`${member.igName}\`, \`${member.youtube}\`, \`${member.instagram}\`, \`${member.memberDescription}\`)">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title memberName">${member.igName}</h5>
                     <p class="card-text memberRealName">${member.realName}</p>
-                    <a class="btn youtubeButton mx-2 mb-3 rounded-circle " target="_blank"
+                    <a class="btn youtubeButton mx-2 mb-3 rounded-circle" target="_blank"
                         href="${member.youtube}"><i class="bi bi-youtube fs-4"></i></a>
-                    <a class="btn btnCustom mx-2 mb-3 rounded-circle" target="_blank"
+                    <a class="btn instagramButton mx-2 mb-3 rounded-circle" target="_blank"
                         href="${member.instagram}"><i class="bi bi-instagram fs-4"></i></a>
                 </div>
             </div>
         </div>
-    `;
+        `;
             container.innerHTML += card;
         });
+
+        window.changeModalContent = function (imgSrc, igName, youtube, instagram, memberDescription) {
+            document.getElementById('modalImage').src = imgSrc;
+            document.getElementById('modalTitle').innerText = igName;
+            document.getElementById('modalYouTube').href = youtube;
+            document.getElementById('modalInstagram').href = instagram;
+            document.getElementById('modalDescription').innerText = memberDescription;
+        }
+
     </script>
-</body>
 </body>
 
 </html>

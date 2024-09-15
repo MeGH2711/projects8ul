@@ -1,31 +1,48 @@
 $(document).ready(function () {
-    $(".owl-carousel").owlCarousel();
-});
-
-var owl = $('.owl-carousel');
-owl.owlCarousel({
-    items: 5,
-    loop: true,
-    margin: 50,
-    nav:false,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsive:{
-        0:{
-            items:1,
-        },
-        600:{
-            items:3,
-        },
-        1000:{
-            items:5,
+    $('.mustWatchCarousel').owlCarousel({
+        items: 3,
+        loop: true,
+        margin: 10,
+        nav: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        autoplaySpeed: 5000,
+        smartSpeed: 5000,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 2,
+            },
+            1000: {
+                items: 3,
+            }
         }
-    }
+    });
+
+    $('.brandsCarousel').owlCarousel({
+        items: 5,
+        loop: true,
+        margin: 50,
+        rtl: true,
+        nav: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 3000,
+        autoplaySpeed: 3000,
+        smartSpeed: 3000,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 3,
+            },
+            1000: {
+                items: 5,
+            }
+        }
+    });
 });
-$('.play').on('click', function () {
-    owl.trigger('play.owl.autoplay', [1000])
-})
-$('.stop').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-})
