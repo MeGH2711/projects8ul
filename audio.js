@@ -1,6 +1,6 @@
 // Background Audio
 const audio = document.getElementById('bgAudio');
-audio.volume = 0;
+audio.volume = 0.1;
 
 document.getElementById('toggleButton').addEventListener('click', function () {
     var icon = document.getElementById('toggleIcon');
